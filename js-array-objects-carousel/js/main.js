@@ -42,7 +42,7 @@ testo.innerHTML=`<h2>${images[numero].title}</h2>
     
     
     prec.addEventListener("click", function () {
-        if(numero!==-1){
+        if(numero>0){
             numero=numero-1
             console.log(images[numero])
             foto.innerHTML=`<img src="${images[numero].image}" >`
@@ -53,7 +53,7 @@ testo.innerHTML=`<h2>${images[numero].title}</h2>
     })
     
     prox.addEventListener("click", function () {
-        if(numero!==5){
+        if(numero<4){
             numero=numero+1
             console.log(images[numero])
             foto.innerHTML=`<img src="${images[numero].image}" >`
