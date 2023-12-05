@@ -26,53 +26,50 @@ let images = [
     }
 ];
 
+
 let foto = document.getElementById('foto')//.innerHTML=`<img src="${images.image}" alt="">`
 let testo = document.getElementById('testo')
 let prec = document.getElementById('prec')
 let prox = document.getElementById('prox')
+// inizializzo il contatore
 let numero = 0
+// do un valore di default
 foto.innerHTML=`<img src="${images[numero].image}" >`
-testo.innerHTML=`<h2>${images[numero].title}</h2>
-<h5>${images[numero].text}</h5>`
+testo.innerHTML=`<h2>${images[numero].title}</h2><h5>${images[numero].text}</h5>`
 
 
 
 
     
     
-    
+//al evento click - se il numero e' maggiore di 0  viene tolto 1 al contatore ,altrimenti il numero e' uguale a 5
+   
     prec.addEventListener("click", function () {
         if(numero>0){
             numero=numero-1
             console.log(images[numero])
             foto.innerHTML=`<img src="${images[numero].image}" >`
-            testo.innerHTML=`<h2>${images[numero].title}</h2>
-<h5>${images[numero].text}</h5>`
+            testo.innerHTML=`<h2>${images[numero].title}</h2><h5>${images[numero].text}</h5>`
+        }
+
+        else{
+            numero=5
         }
         
     })
-    
+//al evento click + se il numero e' minore di 4  viene aggiunto 1 al contatore ,altrimenti il numero e' uguale a -1
     prox.addEventListener("click", function () {
         if(numero<4){
             numero=numero+1
             console.log(images[numero])
             foto.innerHTML=`<img src="${images[numero].image}" >`
-            testo.innerHTML=`<h2>${images[numero].title}</h2>
-<h5>${images[numero].text}</h5>`
+            testo.innerHTML=`<h2>${images[numero].title}</h2><h5>${images[numero].text}</h5>`
         }
-      
+      else{
+        numero=-1
+      }
     })
     
     
 
 
-
-// {/* <img src="./img/01.webp" alt=""> */}
-
-// let img = images.filter((elem) => {
-//     if (elem.image !=='img/01.webp'){
-        
-//     }
-// })
-    // for (let j = 0; j<jmages.length;j++){
-    // }
